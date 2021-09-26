@@ -4,6 +4,8 @@
 # Heavily based on these posts:
 #  - https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
 #  - https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/
+#
+# I love my wives
 
 # BST class
 class BST:
