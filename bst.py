@@ -18,17 +18,17 @@ class BST:
         return self.get_node_rec(self.root, key)
 
     # Get node from tree
-    def get_node_rec(self, root, key):
-        # Base cases where root is null or search matches root
-        if self.root is None or self.root.key == key:
-            return self.root
+    def get_node_rec(self, node, key):
+        # Base cases where node is null or search matches node
+        if node is None or node.key == key:
+            return node
 
-        # Greater than root's key
-        if key > self.root.key:
-            self.get_node_rec(root.right, key)
+        # Greater than node's key
+        if key > node.key:
+            return self.get_node_rec(node.right, key)
 
-        # Less than root's key
-        return self.get_node_rec(root.left, key)
+        # Less than node's key
+        return self.get_node_rec(node.left, key)
 
     # Call add_node()
     def add_node(self, key):
@@ -80,25 +80,3 @@ class Node:
         self.left = self.right = None
 
     pass
-
-
-# Main
-# Initialise tree
-tree = BST()
-
-# Create following BST
-#           50
-#        /     \
-#      30      70
-#     /  \     /  \
-#    20   40  60   80
-tree.add_node(50)
-tree.add_node(30)
-tree.add_node(20)
-tree.add_node(40)
-tree.add_node(70)
-tree.add_node(60)
-tree.add_node(80)
-
-# Example lca() call
-print("LCA of 20 and 40: " + str(tree.lca(20, 40).key))
