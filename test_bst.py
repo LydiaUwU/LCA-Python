@@ -87,7 +87,7 @@ class TestBST(TestCase):
 
         self.assertEqual(tree.get_node(1), tree.get_node(3).left.left)
 
-    # ~~~~~~~~~~ test_ lca() ~~~~~~~~~~
+    # ~~~~~~~~~~ Test lca() ~~~~~~~~~~
     # Where root is null
     def test_lca_none(self):
         tree = bst.BST()
